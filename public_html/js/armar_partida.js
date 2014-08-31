@@ -86,16 +86,20 @@ function armar_slide(){
 
 function armar_noticias(){    
     var $h = jQuery.noConflict();    
-    var url = './JSON/consulta/1.json';    
+    var url = './JSON/consulta/3.json';    
     $h("#tabla_noticias").html(""+url);    
     var tipo_sector=0;
     var resultado_final="";
     $h.getJSON(url, null, function(data) {                        
         for (var i in data) {
+
             var contenido_texto=""+        
                 "<div class='col-md-7'>"+
-                  "<h2 class='featurette-heading'>Titulo. <span class='text-muted'>Subtitulo</span></h2>"+
-                  "<p class='lead'>contenido</p>"+
+                  "<a href='"+data[i]['guid']+"' target='_blanck'>"+
+                   "<h2 class='featurette-heading'>"+data[i]['post_title']+"</h2></a>"+
+                    " <span class='text-muted'>"+"sub titulo"+"</span>"+
+                  "<p class='lead'>"+"contenido"+
+                  "</p>"+
                 "</div>";
 
             var contenido_imagen=""+
