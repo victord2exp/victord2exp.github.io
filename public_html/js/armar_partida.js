@@ -85,8 +85,9 @@ function armar_slide(){
 
 
 function armar_noticias(){    
-    var $h = jQuery.noConflict();    
-    var url = './JSON/consulta/3.json';    
+    var $h = jQuery.noConflict();   
+    var url='http://www.victord2exp.nixiweb.com/php/index.php?id=3';     
+    //var url = './JSON/consulta/3.json';    
     $h("#tabla_noticias").html(""+url);    
     var tipo_sector=0;
     var resultado_final="";
@@ -95,10 +96,10 @@ function armar_noticias(){
 
             var contenido_texto=""+        
                 "<div class='col-md-7'>"+
-                  "<a href='"+data[i]['guid']+"' target='_blanck'>"+
-                   "<h2 class='featurette-heading'>"+data[i]['post_title']+"</h2></a>"+
-                    " <span class='text-muted'>"+"sub titulo"+"</span>"+
-                  "<p class='lead'>"+"contenido"+
+                  "<a href='"+data[i]['direccion']+"' target='_blanck'>"+
+                   "<h2 class='featurette-heading'>"+data[i]['titulo']+"</h2></a>"+
+                    " <span class='text-muted'>"+"-------------"+"</span>"+
+                  "<p class='lead'>"+data[i]['contenido']+
                   "</p>"+
                 "</div>";
 
