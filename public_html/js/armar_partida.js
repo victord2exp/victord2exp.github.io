@@ -15,12 +15,27 @@ function armar_partida(){
         //si entra aqui... es q hubo la conexion...
         //ahora recorremos data..dond esta el JSON
         for (var i in data) {
+          //alert(i);        
+          /*
+          for(var j in data[i]){
+              alert(i+" "+j);
+              alert(data[i][j]);
+              for(var k in data[i][j]){
+                //alert(i+" -->" + j+" -->"+k +" -->"+data[i][j][j]);
+              }
+          }*/
+          //alert(data[i]['descr']);
+        
+          
             var imagen_string="<div class='col-lg-4'>"+
-          "<img class='img-circle' src='http://www.victord2exp.nixiweb.com/"+data[i]['direccion']+"' alt='"+data[i]['titulo']+"' style='width: 140px; height: 140px;'>"+
-          "<h2>"+data[i]['titulo']+"</h2>"+
+          "<img class='img-circle' src='http://www.victord2exp.nixiweb.com/"+data[i]['path']+'/thumbs/thumbs_'+data[i]['file']+"' alt='"+data[i]['text']+"' style='width: 140px; height: 140px;'>"+
+          "<h2>"+data[i]['text']+"</h2>"+
           "<p>"+data[i]['descr']+"</p>"+
-          "<p><a class='btn btn-default' href='http://www.victord2exp.nixiweb.com/"+data[i]['direccion']+"' role='button'>Ver mas</a></p>"+
+          "<p><a class='btn btn-default' href='http://www.victord2exp.nixiweb.com/"+data[i]['path']+'/'+data[i]['file']+"' role='button'>Ver mas</a></p>"+
         "</div>";
+        //alert(imagen_string);
+        
+  
         $h("#tabla_contenido").append(imagen_string);
         }        
     });
