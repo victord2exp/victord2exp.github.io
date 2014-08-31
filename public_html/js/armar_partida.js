@@ -28,10 +28,10 @@ function armar_partida(){
         
           
             var imagen_string="<div class='col-lg-4'>"+
-          "<img class='img-circle' src='http://www.victord2exp.nixiweb.com/"+data[i]['path']+'/thumbs/thumbs_'+data[i]['file']+"' alt='"+data[i]['text']+"' style='width: 140px; height: 140px;'>"+
+          "<img class='img-circle' src='http://www.victord2exp.nixiweb.com"+data[i]['path']+'/thumbs/thumbs_'+data[i]['file']+"' alt='"+data[i]['text']+"' style='width: 140px; height: 140px;'>"+
           "<h2>"+data[i]['text']+"</h2>"+
           "<p>"+data[i]['descr']+"</p>"+
-          "<p><a class='btn btn-default' href='http://www.victord2exp.nixiweb.com/"+data[i]['path']+'/'+data[i]['file']+"' role='button'>Ver mas</a></p>"+
+          "<p><a class='btn btn-default' href='http://www.victord2exp.nixiweb.com"+data[i]['path']+'/'+data[i]['file']+"' role='button'>Ver mas</a></p>"+
         "</div>";
         //alert(imagen_string);
         
